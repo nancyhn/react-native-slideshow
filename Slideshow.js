@@ -78,8 +78,8 @@ export default class Slideshow extends Component {
 
     this.state = {
       position: 0,
-      height: Dimensions.get('window').width * (4 / 9),
-      width: Dimensions.get('window').width,
+      height: this.props.width * (9 / 16),
+      width: this.props.width,
       scrolling: false,
     };
   }
@@ -309,6 +309,7 @@ export default class Slideshow extends Component {
 
 Slideshow.defaultProps = {
   height: 200,
+  width: Dimensions.get('window').width,
   indicatorSize: 8,
   indicatorColor: '#CCCCCC',
   indicatorSelectedColor: '#FFFFFF',
@@ -325,7 +326,8 @@ Slideshow.propTypes = {
 	indicatorSize: PropTypes.number,
 	indicatorColor: PropTypes.string,
 	indicatorSelectedColor: PropTypes.string,
-	height: PropTypes.number,
+  height: PropTypes.number,
+  width: PropTypes.number,
 	position: PropTypes.number,
   scrollEnabled: PropTypes.bool,
   containerStyle: PropTypes.object,
