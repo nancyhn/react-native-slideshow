@@ -21,7 +21,7 @@ const minorVersion = +splitVersion[1];
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    backgroundColor: '#222',
+    backgroundColor: 'transparent',
   },
   layoutIndicator: {
     height: 15,
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
   overlay: {
     opacity: 0.5,
-    backgroundColor: 'black',
+    backgroundColor: 'transparent',
   },
   layoutText: {
     position: 'absolute',
@@ -159,7 +159,7 @@ export default class Slideshow extends Component {
     });
 
     this._interval = setInterval(() => {
-      const newWidth = Dimensions.get('window').width;
+      const newWidth = this.state.width;
       if (newWidth !== this.state.width) {
         this.setState({width: newWidth});
       }
