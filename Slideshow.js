@@ -21,7 +21,7 @@ const minorVersion = +splitVersion[1];
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    backgroundColor: 'transparent',
+    backgroundColor: 'white',
   },
   layoutIndicator: {
     height: 15,
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
   overlay: {
     opacity: 0.5,
-    backgroundColor: 'transparent',
+    backgroundColor: 'white',
   },
   layoutText: {
     position: 'absolute',
